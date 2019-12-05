@@ -56,6 +56,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 登出
 +(void)logout;
 
+/// 解压文件
+/// @param filePath zip文件
+/// @param toPath 解压到的路径
++(BOOL)unzipFile:(NSString*)filePath toPath:(NSString *)toPath;
+
 @end
 
 NS_ASSUME_NONNULL_END

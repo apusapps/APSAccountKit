@@ -28,11 +28,13 @@ typedef NS_ENUM(NSInteger,APSAccountType){
 
 +(instancetype)share;
 
--(BOOL)updteCookie:(NSDictionary*) params;
-
 -(void)loginAnonymousSuccess:(void(^)(APSAccountResult* result))success error:(void(^)(NSError* error))error;
 
 -(void)loginWithToken:(NSString*)token accountType:(APSAccountType)type success:(void(^)(APSAccountResult* result))success error:(void(^)(NSError* error))error;
+
+-(void)getUserInfoSuccess:(void(^)(id result))success error:(void(^)(NSError* error))error;
+
+-(void)updateUserInfoWithParams:(NSDictionary*)params success:(void(^)(id result))success error:(void(^)(NSError* error))error;
 
 -(void)logout;
 
