@@ -1,0 +1,6 @@
+framework module APSAccountKitUnityForHappy {
+  umbrella header "APSAccountKitUnityForHappy-umbrella.h"
+
+  export *
+  module * { export * }
+}

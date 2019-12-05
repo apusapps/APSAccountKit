@@ -1,0 +1,6 @@
+framework module APSAccountKitFacebook {
+  umbrella header "APSAccountKitFacebook-umbrella.h"
+
+  export *
+  module * { export * }
+}
