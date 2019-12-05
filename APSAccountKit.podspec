@@ -17,7 +17,6 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/apusapps/APSAccountKit'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'follyxing' => 'i@xingcheng.me' }
   s.source           = { :git => 'https://github.com/apusapps/APSAccountKit.git', :tag => s.version.to_s }
 
@@ -28,7 +27,7 @@ Pod::Spec.new do |s|
   s.subspec 'Core' do |ss|
     ss.ios.vendored_frameworks = "frameworks/APSAccountKitCore.framework"
     ss.dependency 'AFNetworking'
-    ss.dependency 'APSUtilities', '~> 0.0.2-alpha.15'
+    ss.dependency 'XALFrameworks/APSUtilities', '~> 0.1.24.alpha.1'
   end
 
   s.subspec 'Facebook' do |ss|
