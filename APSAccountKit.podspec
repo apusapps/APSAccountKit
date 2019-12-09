@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'APSAccountKit'
-  s.version          = '1.0.0-alpha.2'
+  s.version          = '1.0.0-alpha.3'
   s.summary          = 'APSAccountKit'
 
 
@@ -25,19 +25,37 @@ Pod::Spec.new do |s|
 
 
   s.subspec 'Core' do |ss|
-    ss.ios.vendored_frameworks = "frameworks/APSAccountKitCore.framework"
+    ss.ios.vendored_frameworks = "frameworks/Release/APSAccountKitCore.framework"
     ss.dependency 'AFNetworking'
     ss.dependency 'XALFrameworks/APSUtilities', '~> 0.1.24.alpha.1'
   end
 
   s.subspec 'Facebook' do |ss|
-    ss.ios.vendored_frameworks = "frameworks/APSAccountKitFacebook.framework"
+    ss.ios.vendored_frameworks = "frameworks/Release/APSAccountKitFacebook.framework"
     ss.dependency 'APSAccountKit/Core'
     ss.dependency 'FBSDKLoginKit'
   end
 
   s.subspec 'UnityForHappy' do |ss|
-    ss.ios.vendored_frameworks = "frameworks/APSAccountKitUnityForHappy.framework"
+    ss.ios.vendored_frameworks = "frameworks/Release/APSAccountKitUnityForHappy.framework"
+    ss.dependency 'APSAccountKit/Core'
+    ss.dependency 'APSAccountKit/Facebook'
+  end
+
+  s.subspec 'Core-DEBUG' do |ss|
+    ss.ios.vendored_frameworks = "frameworks/Release/APSAccountKitCore.framework"
+    ss.dependency 'AFNetworking'
+    ss.dependency 'XALFrameworks/APSUtilities', '~> 0.1.24.alpha.1'
+  end
+
+  s.subspec 'Facebook-DEBUG' do |ss|
+    ss.ios.vendored_frameworks = "frameworks/Release/APSAccountKitFacebook.framework"
+    ss.dependency 'APSAccountKit/Core'
+    ss.dependency 'FBSDKLoginKit'
+  end
+
+  s.subspec 'UnityForHappy-DEBUG' do |ss|
+    ss.ios.vendored_frameworks = "frameworks/Release/APSAccountKitUnityForHappy.framework"
     ss.dependency 'APSAccountKit/Core'
     ss.dependency 'APSAccountKit/Facebook'
   end
