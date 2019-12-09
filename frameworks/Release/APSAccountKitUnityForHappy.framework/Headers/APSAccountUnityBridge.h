@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 匿名登录
 /// @param success 登录成功回调
 /// @param error 登录失败回调
-+(void)loginWithFackbookIsSuccess:(void(^)(APSAccountResult*))success error:(void(^)(NSError *))error;
++(void)loginWithAnonymousIsSuccess:(void(^)(APSAccountResult* result))success error:(void(^)(NSError * err))error;
 
 /// Facebook登录
 +(void)loginWithFackbook;
@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param isCancelled 是否中途取消登录
 /// @param result 登录成功回调
 /// @param error 登录失败回调
-+(void)loginWithFackbookIsCancelled:(void(^)(bool)) isCancelled success:(void(^)(APSAccountResult*))result error:(void(^)(NSError *)) error;
++(void)loginWithFackbookIsCancelled:(void(^)(bool isCancel)) isCancelled success:(void(^)(APSAccountResult* result))result error:(void(^)(NSError *err)) error;
 
 /// 是否已登录
 +(BOOL)isLogin;
@@ -50,6 +50,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取用户头像
 +(NSString* )avatarUrl;
 
+/// 获取用户ID
++(NSString *)userId;
 
 /// 获取HOST
 +(NSString* )hostUrl;

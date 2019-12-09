@@ -37,6 +37,10 @@ typedef NS_ENUM(NSInteger,APSAccountLoginStatus) {
 /// 用户昵称
 @property(nonatomic,copy)NSString * nickName;
 
+
+/// 用户ID
+@property(nonatomic,copy)NSString * userID;
+
 #pragma mark - 加密需要的信息
 @property(nonatomic,copy)NSString * cr;
 @property(nonatomic,copy)NSString * psu;

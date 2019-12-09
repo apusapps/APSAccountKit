@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'APSAccountKit'
-  s.version          = '1.0.0-alpha.3'
+  s.version          = '1.0.0-alpha.4'
   s.summary          = 'APSAccountKit'
 
 
