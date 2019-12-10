@@ -7,13 +7,13 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'APSAccountKit'
+  s.name             = 'APSAccountKit-DEBUG'
   s.version          = '1.0.0-alpha.4'
   s.summary          = 'APSAccountKit'
 
 
   s.description      = <<-DESC
-  APSAccountKit
+  APSAccountKit (DEBUG)
                        DESC
 
   s.homepage         = 'https://github.com/apusapps/APSAccountKit'
@@ -25,21 +25,21 @@ Pod::Spec.new do |s|
 
 
   s.subspec 'Core' do |ss|
-    ss.ios.vendored_frameworks = "frameworks/Release/APSAccountKitCore.framework"
+    ss.ios.vendored_frameworks = "frameworks/Debug/APSAccountKitCore.framework"
     ss.dependency 'AFNetworking'
     ss.dependency 'XALFrameworks/APSUtilities', '~> 0.1.24.alpha.1'
   end
 
   s.subspec 'Facebook' do |ss|
-    ss.ios.vendored_frameworks = "frameworks/Release/APSAccountKitFacebook.framework"
+    ss.ios.vendored_frameworks = "frameworks/Debug/APSAccountKitFacebook.framework"
     ss.dependency 'APSAccountKit/Core'
     ss.dependency 'FBSDKLoginKit'
   end
 
   s.subspec 'UnityForHappy' do |ss|
-    ss.ios.vendored_frameworks = "frameworks/Release/APSAccountKitUnityForHappy.framework"
+    ss.ios.vendored_frameworks = "frameworks/Debug/APSAccountKitUnityForHappy.framework"
     ss.dependency 'APSAccountKit/Core'
     ss.dependency 'APSAccountKit/Facebook'
   end
-   
+
 end
